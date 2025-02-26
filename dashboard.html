@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroDoc - Dashboard</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to AgroDoc Dashboard</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="grid-container">
+            <div class="feature-box" onclick="navigateTo('crop-analysis.html')">
+                <h3>🌱 Crop Analysis</h3>
+                <p>Upload an image of your crop to detect diseases and analyze health.</p>
+            </div>
+            <div class="feature-box" onclick="navigateTo('soil-recommendation.html')">
+                <h3>🌿 Soil-Plant Recommendation</h3>
+                <p>Find the best plants for your soil type and vice versa.</p>
+            </div>
+            <div class="feature-box" onclick="navigateTo('weather.html')">
+                <h3>🌦️ Weather Prediction</h3>
+                <p>Get real-time weather forecasts for your farming needs.</p>
+            </div>
+            <div class="feature-box" onclick="navigateTo('market.html')">
+                <h3>📉 Market Prices</h3>
+                <p>Stay updated on the latest crop prices in the market.</p>
+            </div>
+            <div class="feature-box" onclick="navigateTo('ask-expert.html')">
+                <h3>👨‍🌾 Ask an Expert</h3>
+                <p>Get expert advice on farming practices and solutions.</p>
+            </div>
+            <div class="feature-box" onclick="navigateTo('irrigation.html')">
+                <h3>💧 Smart Irrigation Tips</h3>
+                <p>Optimize water usage for efficient farming.</p>
+            </div>
+            <div class="feature-box" onclick="navigateTo('schemes.html')">
+                <h3>🏛️ Government Schemes & Subsidies</h3>
+                <p>Discover government programs that benefit farmers.</p>
+            </div>
+            <div class="feature-box" onclick="navigateTo('forum.html')">
+                <h3>💬 Community Forum</h3>
+                <p>Join discussions with other farmers and share knowledge.</p>
+            </div>
+            <div class="feature-box" onclick="navigateTo('success-stories.html')">
+                <h3>📜 Success Stories & Case Studies</h3>
+                <p>Learn from successful farmers and case studies.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 AgroDoc. All rights reserved.
+    </footer>
+
+    <script src="./js/dashboard.js"></script>
+</body>
+</html>

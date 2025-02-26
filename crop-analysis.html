@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Analysis</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        Crop Analysis - Identify Crop Health
+    </header>
+
+    <div class="feature-page-container">
+        <h2>Upload an Image of Your Crop</h2>
+        <p>Our AI will analyze the image and detect possible diseases.</p>
+
+        <!-- Upload Box -->
+        <div class="upload-box">
+            <input type="file" id="cropImage" accept="image/*">
+            <label for="cropImage">📂 Choose Image</label>
+        </div>
+
+        <button class="analyze-btn" onclick="analyzeCrop()">Analyze</button>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading-spinner" style="display: none;"></div>
+
+        <!-- Analysis Result -->
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <footer>
+        <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+    </footer>
+
+    <script>
+        function analyzeCrop() {
+            let image = document.getElementById('cropImage').files[0];
+            let loading = document.getElementById("loading");
+            let result = document.getElementById("result");
+
+            if (!image) {
+                alert("Please upload an image first.");
+                return;
+            }
+
+            // Show loading animation
+            loading.style.display = "block";
+            result.innerHTML = "";
+
+            // Simulating AI Analysis
+            setTimeout(() => {
+                loading.style.display = "none";
+                result.innerHTML = "<p>✅ Analysis Complete! No disease detected.</p>";
+            }, 3000); // Simulating a 3-second analysis
+        }
+    </script>
+</body>
+</html>

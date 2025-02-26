@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil-Plant Recommendation</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        Soil & Plant Recommendation
+    </header>
+
+    <div class="feature-page-container">
+        <h2>Upload an Image of Your Soil</h2>
+        <p>Agrodoc will analyze the soil and suggest the best crops to grow.</p>
+
+        <div class="upload-box">
+            <input type="file" id="soilImage" accept="image/*">
+            <label for="soilImage">📸 Upload Soil Image</label>
+        </div>
+
+        <button class="analyze-btn" onclick="analyzeSoil()">Analyze Soil</button>
+
+        <div id="loading" class="loading-spinner" style="display: none;"></div>
+
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <footer>
+        <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+    </footer>
+
+    <script>
+        function analyzeSoil() {
+            let image = document.getElementById('soilImage').files[0];
+            let loading = document.getElementById('loading');
+            let result = document.getElementById('result');
+
+            if (!image) {
+                alert("Please upload an image of the soil.");
+                return;
+            }
+
+            // Simulate AI processing
+            loading.style.display = "block";
+            result.innerHTML = "";
+
+            setTimeout(() => {
+                loading.style.display = "none";
+                result.innerHTML = `
+                    <h3>Soil Analysis Complete! 🌱</h3>
+                    <p>✅ Soil Type: Loamy Soil</p>
+                    <p>🌾 Recommended Crops: Wheat, Barley, Maize</p>
+                    <p>💧 Water Requirement: Moderate</p>
+                `;
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

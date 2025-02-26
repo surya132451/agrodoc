@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroDoc Community Forum</title>
+    <link rel="stylesheet" href="./css/forum.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>💬 AgroDoc Community Forum</h1>
+        <button class="start-discussion" onclick="startDiscussion()">+ Start Discussion</button>
+    </header>
+
+    <div class="forum-container">
+
+        <div class="discussion">
+            <h3>🌾 Best Crops for Summer Season</h3>
+            <p>What crops are best suited for hot summer conditions? Need advice! 🌞</p>
+            <div class="discussion-info">
+                <span>👤 Ram Patel</span> | <span>📅 1 hour ago</span>
+                <button onclick="likePost(this)">👍 Like <span>12</span></button>
+            </div>
+        </div>
+
+        <div class="discussion">
+            <h3>🚜 Organic Farming Techniques</h3>
+            <p>I'm trying to switch to organic farming. Any tips on natural fertilizers? 🌱</p>
+            <div class="discussion-info">
+                <span>👤 Sunita Sharma</span> | <span>📅 3 hours ago</span>
+                <button onclick="likePost(this)">👍 Like <span>8</span></button>
+            </div>
+        </div>
+
+        <div class="discussion">
+            <h3>⛈️ Heavy Rain Affecting Crops</h3>
+            <p>My crops were damaged due to unexpected heavy rainfall. Any solutions? 🌧️</p>
+            <div class="discussion-info">
+                <span>👤 Anil Kumar</span> | <span>📅 5 hours ago</span>
+                <button onclick="likePost(this)">👍 Like <span>5</span></button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>© 2025 AgroDoc - Connecting Farmers 🤝</footer>
+
+    <script src="./js/forum.js"></script>
+
+</body>
+</html>

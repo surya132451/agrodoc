@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+<body>
+    <header>Weather Forecast</header>
+    <div class="weather-container">
+        <div class="weather-card">
+            <h2 id="location">Detecting Location...</h2>
+            <div class="weather-info">
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <p id="temperature">--°C</p>
+                <p id="condition">--</p>
+            </div>
+            <div class="extra-info">
+                <p>Humidity: <span id="humidity">--%</span></p>
+                <p>Wind Speed: <span id="wind-speed">-- km/h</span></p>
+                <p>Chance of Rain: <span id="rain-chance">--%</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function fetchWeather(lat, lon) {
+            const API_KEY = "23bb804847a9fbafcc6872ba3b656879"; // Use your API key
+            const API_URL = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${lat},${lon}&aqi=no`;
+
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error("Weather data fetch failed!");
+
+                const data = await response.json();
+                
+                document.getElementById("location").innerText = `${data.location.name}, ${data.location.country}`;
+                document.getElementById("temperature").innerText = `${data.current.temp_c}°C`;
+                document.getElementById("condition").innerText = data.current.condition.text;
+                document.getElementById("humidity").innerText = `${data.current.humidity}%`;
+                document.getElementById("wind-speed").innerText = `${data.current.wind_kph} km/h`;
+                document.getElementById("rain-chance").innerText = `${data.current.precip_mm} mm`;
+                document.getElementById("weather-icon").src = "https:" + data.current.condition.icon;
+
+                updateBackgroundAnimation(data.current.condition.text);
+            } catch (error) {
+                console.error("Weather fetch failed!", error);
+            }
+        }
+
+        function updateBackgroundAnimation(condition) {
+            const body = document.body;
+            body.classList.remove("sunny", "rainy", "cloudy", "stormy");
+
+            if (condition.includes("Sunny") || condition.includes("Clear")) {
+                body.classList.add("sunny");
+            } else if (condition.includes("Rain") || condition.includes("Drizzle")) {
+                body.classList.add("rainy");
+            } else if (condition.includes("Cloud") || condition.includes("Overcast")) {
+                body.classList.add("cloudy");
+            } else if (condition.includes("Storm") || condition.includes("Thunder")) {
+                body.classList.add("stormy");
+            }
+        }
+
+        function getUserLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    position => fetchWeather(position.coords.latitude, position.coords.longitude),
+                    error => {
+                        console.error("Geolocation error:", error);
+                        document.getElementById("location").innerText = "Location Unavailable";
+                    }
+                );
+            } else {
+                console.error("Geolocation not supported");
+                document.getElementById("location").innerText = "Geolocation Not Supported";
+            }
+        }
+
+        getUserLocation();
+    </script>
+</body>
+</html>
