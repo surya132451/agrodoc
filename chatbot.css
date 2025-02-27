@@ -1,0 +1,83 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #228B22;
+    color: white;
+    padding: 15px;
+    font-size: 1.8rem;
+}
+
+/* Chatbox Styling */
+.chat-container {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    text-align: left;
+}
+
+.bot-message, .user-message {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.bot-message {
+    background: #e0ffe0;
+    text-align: left;
+}
+
+.user-message {
+    background: #d0e1ff;
+    text-align: right;
+    align-self: flex-end;
+}
+
+/* Input Box Styling */
+.input-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+input {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #32CD32;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+button:hover {
+    background: #228B22;
+}

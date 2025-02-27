@@ -1,0 +1,65 @@
+/* === General Styles === */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background 1s ease-in-out;
+}
+
+header {
+    background: #2E8B57;
+    color: white;
+    padding: 15px;
+    font-size: 2rem;
+}
+
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+}
+
+.weather-info img {
+    width: 80px;
+    margin: 10px 0;
+}
+
+.extra-info p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* === Weather Animations === */
+.sunny {
+    background: linear-gradient(to bottom, #ffdf00, #ff9500);
+}
+
+.rainy {
+    background: linear-gradient(to bottom, #4a90e2, #1e3c72);
+    animation: rain 1s infinite alternate;
+}
+
+.cloudy {
+    background: linear-gradient(to bottom, #b0bec5, #78909c);
+}
+
+.stormy {
+    background: linear-gradient(to bottom, #37474f, #212121);
+}
+
+/* Rain Animation */
+@keyframes rain {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 0% 100%; }
+}

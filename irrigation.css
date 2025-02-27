@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #e2f3e4, #b8e994);
+    text-align: center;
+}
+
+/* Header */
+header {
+    font-size: 28px;
+    font-weight: bold;
+    background: #2c5f2d;
+    color: white;
+    padding: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Irrigation Container */
+.irrigation-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px 10%;
+    justify-content: center;
+}
+
+/* Tip Cards */
+.tip-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Images */
+.tip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Titles */
+.tip-card h3 {
+    font-size: 20px;
+    color: #2c5f2d;
+    margin: 15px 0 10px;
+}
+
+/* Descriptions */
+.tip-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background: #2c5f2d;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 20px;
+}

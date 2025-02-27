@@ -1,0 +1,264 @@
+
+/* === General Page Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), 
+                url('../images/farm-bg.jpg') no-repeat center center/cover;
+    color: #333;
+}
+
+/* === Login & Signup Page === */
+.login-container, .signup-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    margin: 100px auto;
+}
+
+.login-box input, .signup-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.login-box input:focus, .signup-box input:focus {
+    border-color: #228B22;
+    box-shadow: 0 0 5px rgba(34, 139, 34, 0.5);
+}
+
+.login-box button, .signup-box button {
+    background: #32CD32;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.login-box button:hover, .signup-box button:hover {
+    background: #228B22;
+}
+/* === General Styling === */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+    text-align: center;
+}
+
+header {
+    background-color: #2E8B57;
+    color: white;
+    font-size: 2.2rem;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* === Dashboard Container (Full Width) === */
+.dashboard-container {
+    width: 100vw; /* Full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+/* === Feature Boxes (Full Width but Centered Content) === */
+.feature-box {
+    width: 100%; /* Full width */
+    max-width: 3000px; /* Limit width for readability */
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    text-align: center;
+}
+
+/* === Feature Title & Description === */
+.feature-box h3 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    color: #006400;
+}
+
+.feature-box p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* === Buttons === */
+.feature-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #008000;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.feature-btn:hover {
+    background-color: #005500;
+}
+
+/* === Hover Effects === */
+.feature-box:hover {
+    transform: scale(1.02);
+}
+
+/* === Footer === */
+footer {
+    background-color: #2E8B57;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+/* === Card-Style Design for Crop Analysis === */
+.crop-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+}
+/* === General Styling === */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+/* === Header === */
+header {
+    background: #228B22;
+    color: white;
+    padding: 15px;
+    font-size: 1.8rem;
+}
+
+/* === Feature Page Container === */
+.feature-page-container {
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Upload Box (Centered) === */
+.upload-box {
+    border: 2px dashed #228B22;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+    width: 50%;
+    max-width: 400px;
+}
+
+.upload-box input {
+    display: none;
+}
+
+.upload-box label {
+    background: #32CD32;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.upload-box label:hover {
+    background: #228B22;
+}
+
+/* === Analyze Button === */
+.analyze-btn {
+    background: #32CD32;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.analyze-btn:hover {
+    background: #228B22;
+}
+
+/* === Loading Animation === */
+.loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid #ddd;
+    border-top: 4px solid #32CD32;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 15px auto;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* === Result Box === */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #228B22;
+    color: white;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/* === Responsive Design (Mobile-Friendly) === */
+@media screen and (max-width: 768px) {
+    .feature-page-container {
+        width: 80%;
+    }
+
+    .upload-box {
+        width: 80%;
+    }
+}
